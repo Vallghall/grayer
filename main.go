@@ -1,14 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"image"
 	"image/color"
 	"image/jpeg"
 	"log"
 	"math"
 	"os"
-	"time"
 )
 
 func main() {
@@ -45,7 +43,7 @@ func main() {
 		}
 	}
 
-	outputFile, err := os.Create(fmt.Sprintf("%s.jpeg", time.Now().String()))
+	outputFile, err := os.Create("gray_output.jpeg")
 	if err != nil {
 		log.Fatalln(err)
 	}
